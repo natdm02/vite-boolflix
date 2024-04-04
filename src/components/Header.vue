@@ -1,5 +1,4 @@
 <script>
-
 import {store} from "../data/store";
 
 export default {
@@ -14,12 +13,12 @@ export default {
 
 <template>
 
-<h1>Header</h1>
-<header>
+  <header>
 
     <div class="d-flex">
       <div class="container-fluid d-flex al-item-cent">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <button class="navbar-toggler text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,22 +46,29 @@ export default {
                 </ul>
               </div>
             </div>
-        
-
           </nav>
         </div>
-
-        <form class="fm-form d-flex al-item-cent" @submit.prevent role="search">
-        <input v-model="store.searchTitle" @keyup.enter="$emit('searchFilm')" class="form-control me-3" type="search" placeholder="Cerca un film o una serie Tv" aria-label="Search">
-        <button class="btn me-5 text-bg-light" @click="$emit('searchFilm')" type="submit">Cerca</button>
+      
+      <form class="fm-form d-flex al-item-cent" @submit.prevent role="search">
+        <input v-model="store.searchTitle" @keyup.enter="$emit('searchFilm'), $emit('searchSeries')" class="form-control me-3" type="search" placeholder="Cerca un film o una serie Tv" aria-label="Search">
+        <button class="btn me-5 text-bg-light" @click="$emit('searchFilm'), $emit('searchSeries')" type="submit">Cerca</button>
       </form>
     </div>
 
   </header>
+
+
+
 </template>
+
+
 <style lang="scss" scoped>
+
 @use '../scss/main.scss' as *;
+
+
 header{
+
   background-color: $bg-secondary;
   
   .fm-form{
@@ -70,25 +76,38 @@ header{
     .form-control{
       width: 250px;
     }
+
   }
+
 .container-fluid{
   img{
     width: 100px;
     margin: 1.5rem .5rem;
   }
+
   .navbar{
+
     .navbar-toggler{
       color: white;
     }
+
+
     a{
       color: rgb(202, 202, 202);
       font-size: .8rem;
       font-weight: 600;
+
       &:hover{
         color: white;
       }
     }
+
+
   }
+
 }
+
+
 }
+
 </style>
