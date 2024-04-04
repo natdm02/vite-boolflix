@@ -1,13 +1,9 @@
-@use './vars' as *;
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1{
-  color: $primary-color;
-}
 img{
   max-width: 100%;
 }

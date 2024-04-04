@@ -7,6 +7,7 @@ import Footer from "./components/Footer.vue"
 import Loader from "./components/partials/Loader.vue";
 import axios from 'axios';
 import {store} from './data/store';
+
 export default {
   name:'App',
   data(){
@@ -14,12 +15,14 @@ export default {
       store
     }
   },
+
   components:{
     Header,
     Main,
     Footer,
     Loader
   },
+
   methods:{
     getApi(){
       store.isLoad = true;
@@ -35,28 +38,36 @@ export default {
         console.log(store.filmArray)
       })
     },
+
 },
+
 mounted(){
     this.getApi();
-    
+    // this.getCardTypes()
   }
+
 }
+
 </script>
 <template>
 
-  <Header />
   <Header @searchFilm="getApi" />
 
   <Loader v-if="store.isLoad"/>
 
-  
   <div v-else>
 
   <Main />
+
   <Footer />
+
   </div>
   
 </template>
+
+
 <style lang="scss">
+
   @use './scss/main.scss' as *;
+
 </style>

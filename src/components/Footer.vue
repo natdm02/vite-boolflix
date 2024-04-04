@@ -1,4 +1,5 @@
 <script>
+
 export default {
   name: "Footer",
   data(){
@@ -10,7 +11,7 @@ export default {
 </script>
 
 <template>
-
+  
   <h1>Footer</h1>
 
 </template>
@@ -18,4 +19,6 @@ export default {
 
 <style lang="scss" scoped>
   @use '../scss/main.scss' as *;
+
+
 </style>
