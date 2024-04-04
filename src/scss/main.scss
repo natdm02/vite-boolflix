@@ -1,6 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import './partials/general';
+@import './partials/mixin';
 @import './partials/typography';
-@import './partials/variables';
-@import './partials/utility';
+@import './partials/vars';
+@import './partials/utilities';
+@import 'bootstrap/scss/bootstrap.scss';
