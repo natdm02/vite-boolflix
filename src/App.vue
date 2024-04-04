@@ -38,13 +38,14 @@ export default {
 },
 mounted(){
     this.getApi();
-    // this.getCardTypes()
+    
   }
 }
 </script>
 <template>
 
   <Header />
+  <Header @searchFilm="getApi" />
 
   <Loader v-if="store.isLoad"/>
 
