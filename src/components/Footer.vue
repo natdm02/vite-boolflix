@@ -11,8 +11,12 @@ export default {
 </script>
 
 <template>
-  
+
+  <footer>
+
   <h1>Footer</h1>
+
+  </footer>
 
 </template>
 
@@ -20,5 +24,8 @@ export default {
 <style lang="scss" scoped>
   @use '../scss/main.scss' as *;
 
-
+  footer{
+    
+    background-color: $bg-secondary;
+  }
 </style>
