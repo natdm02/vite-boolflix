@@ -25,7 +25,7 @@ export default {
 
   methods:{
 
-        //  Popolari
+        // Popolari
         getApiPopular(){
       store.isLoad = true;
       axios.get(store.apiUrlPopular)
@@ -41,7 +41,7 @@ export default {
     },
 
 
-    // Film
+    //  Film
     getApi(){
       store.isLoad = true;
       axios.get(store.apiUrl, {
