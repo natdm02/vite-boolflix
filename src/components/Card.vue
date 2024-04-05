@@ -12,12 +12,12 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper my-2">
+  <div class="wrapper mb-4">
   <div class="fm-card">
 
     
     <div class="front">
-      <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w342${image}`" :alt="original_title" :title="original_title">
+      <img v-if="image != null" :src="`https://image.tmdb.org/t/p/w300${image}`" :alt="original_title" :title="original_title">
       
     </div>
       <div class="cont-info p-2 d-flex j-cont-cent">
@@ -48,9 +48,6 @@ export default {
 
 
 .wrapper, .fm-card {
-	height: 450px;
-	max-width: 445px;
-  aspect-ratio: 2 / 3;
 	margin: 0 auto;
 	position: relative;
 }
@@ -61,12 +58,13 @@ export default {
 	transform: rotateY(180deg);
 }
 .front, .cont-info {
-	width: 300px;
+	width: 100px;
 	position: relative;
 	top: 0;
 	left: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+  border-radius: 10px;
 }
 .front {
 	cursor: pointer;
@@ -77,7 +75,7 @@ export default {
 .cont-info {
 	transform: rotateY(180deg);
 	position: absolute;
-	height: 450px;
+	height: 100%;
 	background: #fff;
 }
 .info {
@@ -88,7 +86,9 @@ export default {
   text-align: center;
 
   img{
-    height: 445px;
+    object-fit: contain;
+    height: 450px;
+    border-radius: 10px;
   }
 
     .cont-info{

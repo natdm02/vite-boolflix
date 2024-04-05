@@ -24,7 +24,7 @@ export default {
       <div class="container-fluid">
 
         <h1 class="py-3" v-if="store.filmArray.length > 0">Film</h1>
-        <div class="row row-cols-5">
+        <div class="row row-cols-auto">
           <Card
               v-for
               ="film in store.filmArray"
@@ -42,7 +42,7 @@ export default {
 
         <h1 class="py-3" v-if="store.seriesArray.length > 0">Serie TV</h1>
         
-        <div class="row row-cols-5">
+        <div class="row row-cols-auto">
           <Card
               v-for
               ="serie in store.seriesArray"
@@ -60,7 +60,7 @@ export default {
       <div class="container-fluid">
 
         <h1 class="py-3" v-if="store.popularArray.length > 0">Popolari</h1>
-        <div class="row row-cols-5">
+        <div class="row row-cols-auto">
           <Card
               v-for
               ="film in store.popularArray"
