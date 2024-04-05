@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper">
-  <div class="fm-card col mb-3">
+  <div class="wrapper my-2">
+  <div class="fm-card">
 
     
     <div class="front">
@@ -23,7 +23,7 @@ export default {
       <div class="cont-info p-2 d-flex j-cont-cent">
         <div class="info pt-3 al-item-cent">
           <h1 class="py-1">{{ title }}</h1>
-          <h2 class="py-1">{{ original_title }}</h2>
+          <h2 class="py-1">titolo orginale {{ original_title }}</h2>
     
 
           <span>Lingua:</span>
@@ -46,6 +46,44 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
+
+.wrapper, .fm-card {
+	height: 450px;
+	max-width: 445px;
+  aspect-ratio: 2 / 3;
+	margin: 0 auto;
+	position: relative;
+}
+.wrapper {
+	perspective: 900px;
+}
+.wrapper:hover .fm-card {
+	transform: rotateY(180deg);
+}
+.front, .cont-info {
+	width: 300px;
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.front {
+	cursor: pointer;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.cont-info {
+	transform: rotateY(180deg);
+	position: absolute;
+	height: 450px;
+	background: #fff;
+}
+.info {
+	padding-top: 25%;
+}
+
 .fm-card{
   text-align: center;
 
@@ -60,11 +98,11 @@ export default {
       min-height: 250px;
   
       h1{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
   
       h2{
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
   
       img{
